@@ -1,3 +1,10 @@
 spring:
-  activmq:
+  activemq:
     broker-url: tcp://localhost:61616
+    packages:
+      trust-all: true
+camel:
+  component:
+    servlet:
+      mapping:
+        contextPath: /*

@@ -1,6 +1,8 @@
 package com.templates.producer.domain;
 
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable{
     private Long id;
     private String from;
     private String to;
@@ -45,5 +47,15 @@ public class Message {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }
